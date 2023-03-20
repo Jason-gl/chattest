@@ -5,7 +5,7 @@ import streamlit as st
 
 
 # 设置OpenAI API Key
-openai.api_key = os.environ["OPENAI_API_KEY"]
+openai.api_key = st.secrets["openai"]["api_key"]
 
 # 根据用户输入生成摘要的函数
 def generate_summary(prompt, summary_length, tone, quality):
