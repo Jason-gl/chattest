@@ -11,7 +11,7 @@ openai.api_key = st.secrets["openai"]["api_key"]
 def generate_summary(prompt, summary_length, tone, quality):
     # TODO: 使用OpenAI API生成摘要
     response = openai.Completion.create(
-        engine="text-davinci-003",
+        model="gpt-3.5-turbo",
         prompt=prompt,
         max_tokens=summary_length,
         temperature=0.2,
@@ -28,7 +28,7 @@ def generate_summary(prompt, summary_length, tone, quality):
 # Streamlit应用程序
 def main():
     # 页面标题
-    st.title("牛逼克拉斯")
+    st.title("春萍的文案小助手")
 
     # 用户输入
     prompt = st.text_area("输入你想知道的")
