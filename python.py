@@ -33,7 +33,7 @@ def main():
     # 用户输入
     prompt = st.text_area("输入你想知道的")
 
-    summary_length = st.slider("选择输出字数（10≈5个汉字）", 50, 200, 1000)
+    summary_length = st.slider("选择输出字数（10≈5个汉字）", 50, 1000, 300)
 
     tone = st.selectbox("选择输出语气（灰度）", ["正式", "非正式"])
 
