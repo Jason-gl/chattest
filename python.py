@@ -11,7 +11,7 @@ openai.api_key = st.secrets["openai"]["api_key"]
 def generate_summary(prompt, summary_length, tone, quality):
     # TODO: 使用OpenAI API生成摘要
     response = openai.Completion.create(
-        model="gpt-3.5-turbo",
+        engine="gpt-3.5-turbo",
         prompt=prompt,
         max_tokens=summary_length,
         temperature=0.2,
